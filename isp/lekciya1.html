@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Понятие информации и информационных технологий</title>
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/magic.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html">← Информационные технологии</a>
+    <div class="header__right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Переключить тему">
+        <svg data-icon="dark" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        <svg data-icon="light" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="display:none"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-4v2m0 14v2m8-9h2M2 12h2m13-7l1.5-1.5M5.5 18.5L7 17m12 1l-1.5-1.5M5.5 5.5L7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+<div class="container">
+  <article class="lesson">
+    <header class="lesson__header">
+      <div class="badge-row">
+        <span class="badge badge--mark">Лекция 1</span>
+        <span class="badge badge--mark">09.02.07 • ИС и программирование</span>
+      </div>
+      <h1 class="lesson__title">Понятие информации и информационных технологий</h1>
+      <button class="btn btn--quiz" data-quiz-id="isp-1" style="margin-top:18px">Проверить себя</button>
+    </header>
+    <div class="lesson__layout">
+      <nav class="lesson__toc"><div class="prose"><ul class="toc"><li><a class="toc-link" href="#s1">1. Понятие информации. Данные, информация, знания</a></li><li><a class="toc-link" href="#s2">2. Способы восприятия и хранения информации</a></li><li><a class="toc-link" href="#s3">3. Информационные технологии (ИТ): понятие, классификация, задачи</a></li><li><a class="toc-link" href="#s4">4. Основные устройства ввода и вывода</a></li><li><a class="toc-link" href="#s5">5. Современные smart-устройства</a></li><li><a class="toc-link" href="#s6">6. Самостоятельные задания</a></li><li><a class="toc-link" href="#tasks">Практические задания</a></li><li><a class="toc-link" href="#hw">Домашнее задание</a></li></ul></div></nav>
+      <div class="prose">
+        <nav class="card">
+          <h3>Содержание</h3>
+          <ol style="padding-left:1.25rem;margin-top:.5rem">
+            <li style="margin-bottom:.25rem"><a href="#s1" style="color:var(--accent);text-decoration:none">Понятие информации. Данные, информация, знания</a></li>
+            <li style="margin-bottom:.25rem"><a href="#s2" style="color:var(--accent);text-decoration:none">Способы восприятия и хранения</a></li>
+            <li style="margin-bottom:.25rem"><a href="#s3" style="color:var(--accent);text-decoration:none">ИТ: понятие, классификация, задачи</a></li>
+            <li style="margin-bottom:.25rem"><a href="#s4" style="color:var(--accent);text-decoration:none">Устройства ввода и вывода</a></li>
+            <li style="margin-bottom:.25rem"><a href="#s5" style="color:var(--accent);text-decoration:none">Smart-устройства</a></li>
+            <li><a href="#s6" style="color:var(--accent);text-decoration:none">Самостоятельное задание</a></li>
+          <li><a href="#tasks" style="color:var(--accent);text-decoration:none">Практические задания к лекции (2 задания)</a></li>
+            <li><a href="#hw" style="color:var(--accent);text-decoration:none">Домашнее задание</a></li></ol>
+        </nav>
+        <div class="def-block"><span class="term">Ключевые сокращения</span> АИС (автоматизированная информационная система), БД (база данных), API (Application Programming Interface), URL (Uniform Resource Locator), ИТ (IT — Information Technology), ОС (операционная система), ПО (программное обеспечение), UI (User Interface), UX (User Experience)</div>
+        <div class="section-nav"><a href="#s1">Начать изучение &rarr;</a></div>
+        <h2 class="section-title first" id="s1">1. Понятие информации. Данные, информация, знания</h2>
+        <div class="card">
+          <p>Термин <strong>информация</strong> происходит от латинского <em>informatio</em> — разъяснение, изложение, осведомлённость. В широком смысле информация — это сведения об окружающем мире и протекающих в нём процессах, которые воспринимаются человеком или специальными устройствами.</p>
+          <p>В сфере информационных систем и программирования информация — это осмысленные данные, представленные в форме, пригодной для передачи, обработки и хранения. Различают три взаимосвязанных понятия:</p>
+        </div>
+        <div class="term-grid">
+          <div class="term-card"><span class="label">Данные (Data)</span><span class="desc">Совокупность зафиксированных сигналов, символов или чисел, не имеющих смысла вне контекста. Пример: число &laquo;404&raquo; — это данные; это может быть HTTP-статус (Not Found), номер аудитории или цена товара.</span></div>
+          <div class="term-card"><span class="label">Информация (Information)</span><span class="desc">Данные, помещённые в контекст и наделённые смыслом. Пример: &laquo;Сервер вернул HTTP-код 404 (Not Found), значит, запрашиваемая страница не существует&raquo;.</span></div>
+          <div class="term-card"><span class="label">Знания (Knowledge)</span><span class="desc">Структурированная информация, проверенная практикой и пригодная для принятия решений. Пример: &laquo;Если при запросе к API возвращается 404, необходимо проверить правильность URL в коде&raquo;.</span></div>
+        </div>
+        <div class="def-block"><span class="term">Информация (в контексте АИС)</span> Это совокупность данных, обработанных и организованных так, чтобы они могли быть использованы для анализа, принятия решений и управления. В АИС информация хранится в базах данных (БД), обрабатывается серверными приложениями и предоставляется пользователю через интерфейс (API, веб-интерфейс или десктопное приложение).</div>
+        <div class="info-box"><strong>Пример для разработчика ПО:</strong> когда пользователь вводит логин и пароль в форму аутентификации, эти символы — <strong>данные</strong>. После проверки на соответствие записи в БД система возвращает сообщение &laquo;Вход выполнен&raquo; — это <strong>информация</strong>. А правило &laquo;Пароль должен содержать не менее 8 символов, включая цифры и буквы разного регистра&raquo; — это <strong>знание</strong>, заложенное в бизнес-логику приложения.</div>
+        <div class="section-nav"><a href="#s2">Далее: Способы восприятия и хранения &rarr;</a><a href="#">К началу</a></div>
+        <h2 class="section-title" id="s2">2. Способы восприятия и хранения информации</h2>
+        <div class="card">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:.4rem">Способы восприятия</h3>
+          <p>Для специалиста в области ИС важно понимать, что информация может существовать в различных формах:</p>
+          <ul><li><strong>Визуальная</strong> — текст, изображения, видео, интерфейсы. Основы UI/UX.</li><li><strong>Аудиальная</strong> — звук, речь. ASR, IVR.</li><li><strong>Тактильная</strong> — осязание. Haptic feedback, сенсорные экраны.</li><li><strong>Цифровая (машинная)</strong> — двоичный код. Любая информация преобразуется в двоичный код для обработки процессором.</li></ul>
+        </div>
+        <div class="card">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:.4rem">Способы хранения</h3>
+          <div class="accordion">
+            <div class="accordion-item open"><button class="accordion-trigger">RAM (Random Access Memory) <span class="arrow">&#9660;</span></button><div class="accordion-body"><div class="accordion-body-inner"><p>Энергозависимая память. В современных АИС рекомендуется от 16 ГБ RAM для серверов приложений.</p><p><strong>Пример:</strong> при запуске IDE (VS Code, IntelliJ IDEA) её код загружается из SSD в RAM.</p></div></div></div>
+            <div class="accordion-item"><button class="accordion-trigger">Постоянное хранение (SSD / HDD) <span class="arrow">&#9660;</span></button><div class="accordion-body"><div class="accordion-body-inner"><p>SSD — твердотельный накопитель. HDD — жёсткий диск.</p><p><strong>Пример:</strong> СУБД PostgreSQL хранит таблицы на SSD для быстрых операций.</p></div></div></div>
+            <div class="accordion-item"><button class="accordion-trigger">Облачное хранение (Cloud Storage) <span class="arrow">&#9660;</span></button><div class="accordion-body"><div class="accordion-body-inner"><p>Данные на удалённых серверах (Yandex Object Storage, AWS S3).</p><p><strong>Пример:</strong> файлы статики (CSS, JS, изображения) размещаются в объектном хранилище.</p></div></div></div>
+          </div>
+        </div>
+        <div class="section-nav"><a href="#s3">Далее: ИТ &rarr;</a><a href="#s1">&larr; Назад</a></div>
+        <h2 class="section-title" id="s3">3. Информационные технологии (ИТ): понятие, классификация, задачи</h2>
+        <div class="def-block"><span class="term">ИТ (IT — Information Technology, информационные технологии)</span> Совокупность методов, процессов и программно-технических средств для сбора, обработки, хранения, передачи и представления информации с целью снижения трудоёмкости и повышения эффективности.</div>
+        <div class="card">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:.5rem">Классификация ИТ</h3>
+          <div class="table-wrap">
+            <table><thead><tr><th>Признак</th><th>Виды ИТ</th><th>Примеры</th></tr></thead>
+            <tbody><tr><td>По типу информации</td><td>Текстовые, табличные, графические, мультимедийные</td><td>NLP, Computer Vision, DSP</td></tr>
+            <tr><td>По степени автоматизации</td><td>Ручные, автоматизированные, автоматические</td><td>CI/CD, автотесты</td></tr>
+            <tr><td>По сфере применения</td><td>Офисные, промышленные, образовательные</td><td>ERP, CRM, LMS</td></tr>
+            <tr><td>По архитектуре</td><td>Десктопные, веб, мобильные, облачные</td><td>SPA на React, Flutter, Spring Boot</td></tr></tbody></table>
+          </div>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--accent);margin:1.25rem 0 .5rem">Основные задачи ИТ в АИС</h3>
+          <div class="term-grid">
+            <div class="term-card"><span class="label">Сбор данных</span><span class="desc">Из веб-форм, API, IoT-датчиков. Парсеры, веб-хуки, Kafka.</span></div>
+            <div class="term-card"><span class="label">Обработка данных</span><span class="desc">Валидация, фильтрация, агрегация. Java, Python, C#, SQL, ETL.</span></div>
+            <div class="term-card"><span class="label">Хранение данных</span><span class="desc">СУБД: PostgreSQL, MySQL, MongoDB, Redis.</span></div>
+            <div class="term-card"><span class="label">Передача данных</span><span class="desc">HTTP/HTTPS, gRPC, WebSocket, REST/SOAP API.</span></div>
+            <div class="term-card"><span class="label">Представление</span><span class="desc">UI: HTML/CSS/JS, WPF, Qt, Electron, Grafana.</span></div>
+            <div class="term-card"><span class="label">Защита информации</span><span class="desc">AES, RSA, JWT, OAuth 2.0, антивирусы, бэкапы.</span></div>
+          </div>
+        </div>
+        <div class="section-nav"><a href="#s4">Далее: Устройства ввода/вывода &rarr;</a><a href="#s2">&larr; Назад</a></div>
+        <h2 class="section-title" id="s4">4. Основные устройства ввода и вывода</h2>
+        <div class="card"><p>Устройства ввода-вывода (I/O) обеспечивают взаимодействие пользователя с АИС. Драйверы преобразуют физические сигналы в цифровые данные и обратно.</p></div>
+        <div class="term-grid">
+          <div class="term-card"><span class="label">Клавиатура</span><span class="desc">Ввод текста, команд ОС, заполнение форм.</span></div>
+          <div class="term-card"><span class="label">Мышь / Тачпад</span><span class="desc">Управление курсором. Ключевое для IDE и администрирования.</span></div>
+          <div class="term-card"><span class="label">Микрофон</span><span class="desc">Ввод звука. Голосовые интерфейсы, ASR, видеоконференции.</span></div>
+          <div class="term-card"><span class="label">Веб-камера</span><span class="desc">Ввод видео. Видеозвонки, биометрия, QR-сканеры.</span></div>
+          <div class="term-card"><span class="label">Сканер</span><span class="desc">Преобразование бумажных документов. OCR.</span></div>
+          <div class="term-card"><span class="label">Сенсорный экран</span><span class="desc">Ввод касанием. POS-терминалы, киоски, мобильные приложения.</span></div>
+        </div>
+        <div class="term-grid">
+          <div class="term-card"><span class="label">Монитор</span><span class="desc">Визуальное отображение. Разрешение 2K/4K, цветовой охват.</span></div>
+          <div class="term-card"><span class="label">Принтер</span><span class="desc">Вывод на бумагу. Печать отчётов, накладных, актов.</span></div>
+          <div class="term-card"><span class="label">Колонки / Наушники</span><span class="desc">Вывод звука. Мультимедийные АИС, голосовые помощники.</span></div>
+          <div class="term-card"><span class="label">Проектор</span><span class="desc">Проецирование. Демонстрация ПО, презентации.</span></div>
+        </div>
+        <div class="info-box neon"><strong>Для разработчика:</strong> веб-приложения — responsive design. Десктопные — горячие клавиши, печать, WebRTC для аудио/видео.</div>
+        <div class="section-nav"><a href="#s5">Далее: Smart-устройства &rarr;</a><a href="#s3">&larr; Назад</a></div>
+        <h2 class="section-title" id="s5">5. Современные smart-устройства</h2>
+        <div class="def-block"><span class="term">Smart-устройство (Smart Device)</span> Устройство с процессором, памятью, датчиками и сетевым подключением, способное собирать данные, обрабатывать их и выполнять действия.</div>
+        <div class="card"><p>Smart-устройства объединяют функции ввода, вывода и обработки. Программирование таких устройств — направление IoT.</p></div>
+        <div class="term-grid">
+          <div class="term-card"><span class="label">Смартфон</span><span class="desc">Платформа для iOS/Android. GPS, акселерометр, гироскоп.</span></div>
+          <div class="term-card"><span class="label">Смарт-часы</span><span class="desc">watchOS, Wear OS. Push-уведомления через API.</span></div>
+          <div class="term-card"><span class="label">Умная колонка</span><span class="desc">Алиса, Салют. Разработка навыков через Yandex Dialogs API.</span></div>
+          <div class="term-card"><span class="label">IoT-устройства</span><span class="desc">Лампы, розетки, термостаты. Протоколы MQTT, CoAP.</span></div>
+          <div class="term-card"><span class="label">Smart-TV</span><span class="desc">Tizen, webOS, Android TV. Digital signage.</span></div>
+          <div class="term-card"><span class="label">POS-терминалы</span><span class="desc">Приём оплаты. Интеграция через API эквайеров. PCI DSS.</span></div>
+        </div>
+        <div class="info-box"><strong>Пример интеграции:</strong> система &laquo;Умный склад&raquo; (WMS) использует IoT-датчики, smart-весы, ТСД на Android. Данные через MQTT в АИС, уведомления через Telegram API.</div>
+        <div class="section-nav"><a href="#s6">Далее: Задание &rarr;</a><a href="#s4">&larr; Назад</a></div>
+        <h2 class="section-title" id="s6">6. Самостоятельные задания</h2>
+        <div class="task-list">
+          <div class="task-card">
+            <div class="task-title">Классификация ИТ по описанию</div>
+            <div class="task-body">
+              <p>Определите, к какому типу ИТ (информационной технологии) относится каждая ситуация. Для каждой запишите: номер, тип ИТ, обоснование (1-2 предложения). Используйте классификацию из лекции.</p>
+              <ol>
+                <li>Бухгалтер ежемесячно вручную переносит цифры из накладных в Excel-таблицу.</li>
+                <li>Разработчик настроил GitLab CI/CD — при каждом пуше в main код автоматически собирается, тестируется и развёртывается на сервер.</li>
+                <li>Программа на Python каждую минуту забирает курс валют через API банка, сохраняет в PostgreSQL и при изменении более чем на 1 % отправляет уведомление в Telegram.</li>
+                <li>Студент печатает реферат на принтере после набора текста в Word.</li>
+                <li>Мобильное приложение интернет-магазина передаёт данные о заказе на сервер через REST API, сервер записывает их в базу данных и отправляет подтверждение.</li>
+              </ol>
+            </div>
+            <div class="task-meta"><span class="badge level">базовый уровень</span><span class="badge format">классификация + обоснование</span></div>
+          </div>
+          <div class="task-card">
+            <div class="task-title">Сравнение устройств хранения данных</div>
+            <div class="task-body">
+              <p>Заполните сравнительную таблицу трёх типов устройств хранения: <strong>RAM</strong>, <strong>SSD</strong> и <strong>HDD</strong>. Критерии сравнения:</p>
+              <ul>
+                <li>энергозависимость (да/нет);</li>
+                <li>скорость чтения/записи;</li>
+                <li>типичный объём;</li>
+                <li>для каких задач в АИС используется;</li>
+                <li>пример использования из практики разработки.</li>
+              </ul>
+              <p>Дополнительно укажите, какое устройство вы выбрали бы для хранения базы данных PostgreSQL на production-сервере и почему.</p>
+            </div>
+            <div class="task-meta"><span class="badge level">базовый уровень</span><span class="badge format">таблица + обоснование</span></div>
+          </div>
+        </div>
+        <h2 class="section-title" style="margin-top:2.5rem" id="tasks">Практические задания</h2>
+<div class="task-block" id="задание1">
+  <span class="task-num">Задание 1</span>
+  <div class="task-title">Классификация информационных технологий</div>
+  <span class="lbl">Цель</span>
+  <div class="goal">Закрепить умение различать виды и сферы применения информационных технологий.</div>
+  <span class="lbl">Задача</span>
+  <div class="job">Составьте таблицу из четырёх колонок «Тип ИТ / Пример / Сфера применения / Результат». Приведите по 3 примера для каждого из четырёх типов ИТ, изученных на лекции.</div>
+  <span class="lbl">Входные данные</span>
+  <div class="src-text"><p>Образец заголовков таблицы: «Текстообработка», «Табличные вычисления», «Работа с базами данных», «Компьютерная графика».</p>
+<p>Для каждого типа ИТ укажите: конкретную программу (Word, Excel, Access, Photoshop и т.п.), сферу применения и какой результат она даёт.</p></div>
+  <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">таблица + примеры</span></div>
+</div>
+<div class="task-block" id="задание2">
+  <span class="task-num">Задание 2</span>
+  <div class="task-title">Информационные революции</div>
+  <span class="lbl">Цель</span>
+  <div class="goal">Проверить понимание этапов развития информационных технологий и их влияния на общество.</div>
+  <span class="lbl">Задача</span>
+  <div class="job">Начертите ленту времени из четырёх информационных революций. Для каждой укажите: главное изобретение, век и одно последствие для общества.</div>
+  <span class="lbl">Входные данные</span>
+  <div class="src-text"><p>Используйте материал лекции: письменность, книгопечатание, электричество и электронная связь, компьютерные сети.</p>
+<p>Под лентой времени сделайте вывод из 2–3 предложений о том, какая революция оказала наибольшее влияние на вас лично.</p></div>
+  <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">лента времени</span></div>
+</div>
+<h2 class="section-title" style="margin-top:2.5rem" id="hw">Домашнее задание</h2>
+<div class="task-block" id="hwork">
+  <span class="task-num">Домашнее задание</span>
+  <div class="task-title">Эссе по теме «Информационные технологии в моей будущей профессии»</div>
+  <span class="lbl">Цель</span>
+  <div class="goal">Применить знания лекции к профессиональной деятельности.</div>
+  <span class="lbl">Задача</span>
+  <div class="job">Напишите эссе объёмом 1–1,5 страницы о том, какие информационные технологии и программы вы будете использовать в профессии специалиста по информационным системам и программированию. Приведите 2–3 конкретных примера.</div>
+  <span class="lbl">Входные данные</span>
+  <div class="src-text"><p>В начале укажите название специальности и перечень используемых инструментов.</p>
+<p>В заключении объясните, почему владение ИТ важно для карьеры. Оформите по ГОСТ 7.32-2017: Times New Roman 14 пт, интервал 1,5, поля 30/15/20/20 мм.</p></div>
+  <div class="task-meta"><span class="badge level">20 баллов</span><span class="badge">эссе 1–1,5 стр.</span></div>
+</div>
+
+        <div class="lesson__nav">
+          <a class="btn btn--ghost btn--sm" href="../index.html">← Ко всем материалам</a>
+          <button class="btn btn--sm btn--quiz" data-quiz-id="isp-1">Проверить себя</button>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="footer"><div class="container">Информационные технологии в профессиональной деятельности</div></footer>
+<script src="../js/theme.js"></script>
+<script src="../js/cursor.js"></script>
+<script src="../js/quiz-data.js"></script>
+<script src="../js/quiz.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Excel: графики и диаграммы</title>
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/magic.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html">← Информационные технологии</a>
+    <div class="header__right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Переключить тему">
+        <svg data-icon="dark" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        <svg data-icon="light" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="display:none"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-4v2m0 14v2m8-9h2M2 12h2m13-7l1.5-1.5M5.5 18.5L7 17m12 1l-1.5-1.5M5.5 5.5L7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+<div class="container">
+  <article class="lesson">
+    <header class="lesson__header">
+      <div class="badge-row">
+        <span class="badge badge--mark">Практическая работа 6</span>
+        <span class="badge badge--mark">09.02.07 • ИС и программирование</span>
+      </div>
+      <h1 class="lesson__title">Excel: графики и диаграммы</h1>
+      <button class="btn btn--quiz" data-quiz-id="isp-excel3" style="margin-top:18px">Проверить себя</button>
+    </header>
+    <div class="lesson__layout">
+      <nav class="lesson__toc"><div class="prose"><ul class="toc"><li><a class="toc-link" href="#s0">Краткая теория: диаграммы и графики в Excel</a></li><li><a class="toc-link" href="#t1">Задание 1. Круговая диаграмма</a></li><li><a class="toc-link" href="#t2">Задание 2. Столбчатая диаграмма (гистограмма)</a></li><li><a class="toc-link" href="#t3">Задание 3. Линейный график динамики</a></li><li><a class="toc-link" href="#t4">Задание 4. Расчёт итогов и диаграмма</a></li><li><a class="toc-link" href="#dz">Домашнее задание: три диаграммы на разных листах</a></li><li><a class="toc-link" href="#k">Контрольные вопросы</a></li><li><a class="toc-link" href="#s6">Порядок сдачи и критерии оценивания</a></li></ul></div></nav>
+      <div class="prose">
+        <nav class="card">
+          <h3>Содержание практической работы</h3>
+          <ol style="padding-left:1.5rem;margin-top:.5rem">
+            <li><a href="#s0" style="color:var(--accent);text-decoration:none">Краткая теория: диаграммы и графики в Excel</a></li>
+            <li><a href="#t1" style="color:var(--accent);text-decoration:none">Задание 1. Круговая диаграмма</a></li>
+            <li><a href="#t2" style="color:var(--accent);text-decoration:none">Задание 2. Столбчатая диаграмма (гистограмма)</a></li>
+            <li><a href="#t3" style="color:var(--accent);text-decoration:none">Задание 3. Линейный график динамики</a></li>
+            <li><a href="#t4" style="color:var(--accent);text-decoration:none">Задание 4. Расчёт итогов и диаграмма</a></li>
+            <li><a href="#dz" style="color:var(--accent);text-decoration:none">Домашнее задание: три диаграммы на разных листах</a></li>
+            <li><a href="#k" style="color:var(--accent);text-decoration:none">Контрольные вопросы</a></li>
+            <li><a href="#s6" style="color:var(--accent);text-decoration:none">Порядок сдачи и критерии оценивания</a></li>
+          </ol>
+        </nav>
+        <!-- s0 -->
+        <h2 class="section-title first" id="s0">Краткая теория: диаграммы и графики в Excel</h2>
+        <div class="card">
+          <p>Диаграммы превращают числовые данные в наглядную картинку: с их помощью легко сравнить части целого, увидеть, какой показатель больше, и проследить изменения во времени. В этой практической работе мы построим три базовых типа диаграмм в <span class="key">Microsoft Excel</span>, <span class="key">LibreOffice Calc</span>, <span class="key">Google Таблицы</span> или <span class="key">Яндекс Таблицы</span>.</p>
+          <p>Перед построением нужно правильно подготовить данные: диапазон с подписями (например, названия категорий) и диапазон со значениями. После этого вызывают меню вставки диаграммы и выбирают нужный тип. Основные типы:</p>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Тип диаграммы</th><th>Когда используют</th></tr></thead>
+            <tbody>
+              <tr><td>Круговая</td><td>Показать доли частей в целом</td></tr>
+              <tr><td>Столбчатая (гистограмма)</td><td>Сравнить значения между категориями</td></tr>
+              <tr><td>Линейный график</td><td>Показать изменение величины во времени</td></tr>
+            </tbody>
+          </table></div>
+          <div class="info-box"><strong>Настройка диаграммы:</strong> у любой диаграммы можно изменить заголовок, подписи данных, легенду и подписи осей. Начните с выделения данных, затем вставьте диаграмму и отредактируйте её элементы.</div>
+        </div>
+        <div class="section-nav"><a href="#t1">К заданию 1 &rarr;</a><a href="#">К началу</a></div>
+        <!-- TASK 1 -->
+        <div class="task-block" id="t1">
+          <span class="task-num">Задание 1</span>
+          <div class="task-title">Задание 1. Круговая диаграмма: доли расходов</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Научиться строить круговую диаграмму и наглядно показывать доли категорий.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">На листе «Задание 1» постройте круговую диаграмму, показывающую доли категорий расходов на инфраструктуру. Сначала добавьте столбец с итогом (СУММ по диапазону), затем выделите диапазон категорий и соответствующую сумму и постройте круговую диаграмму. Добавьте заголовок и легенду.</div>
+          <span class="lbl">Входные данные (перенесите эту таблицу на лист «Задание 1»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th></tr>
+                <tr><th class="corner"></th><th>Категория</th><th>Сумма, руб.</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Инфраструктура</td><td>48000</td></tr>
+                <tr><td class="row-head">2</td><td>ПО (программное обеспечение)</td><td>26600</td></tr>
+                <tr><td class="row-head">3</td><td>Услуги</td><td>9800</td></tr>
+                <tr><td class="row-head">4</td><td>Сотрудники в резерве</td><td>12400</td></tr>
+                <tr><td class="row-head">5</td><td>Обучение</td><td>7400</td></tr>
+                <tr><td class="row-head">6</td><td>Аренда и лицензии</td><td>16800</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>построена круговая диаграмма по данным «Категория — Сумма»;</li>
+              <li>у диаграммы есть заголовок и легенда;</li>
+              <li>доли подписаны или видны в легенде.</li>
+            </ul>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">круговая диаграмма</span></div>
+        </div>
+        <!-- TASK 2 -->
+        <div class="task-block" id="t2">
+          <span class="task-num">Задание 2</span>
+          <div class="task-title">Задание 2. Столбчатая диаграмма (гистограмма): затраты по категориям</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Научиться строить столбчатую диаграмму для сравнения значений категорий.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">На листе «Задание 2» постройте столбчатую диаграмму, сравнивающую нагрузку на серверы по месяцам для трёх сервисов. Таблица уже содержит данные по трём месяцам. Выделите диапазон с названиями месяцев и значениями и постройте столбчатую диаграмму.</div>
+          <span class="lbl">Входные данные (перенесите эту таблицу на лист «Задание 2»)</span>
+          <div class="src-text">
+            <p></p>
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                <tr><th class="corner"></th><th>Месяц</th><th>Веб-сервис</th><th>База данных</th><th>API</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Январь</td><td>1200</td><td>850</td><td>640</td></tr>
+                <tr><td class="row-head">2</td><td>Февраль</td><td>1350</td><td>900</td><td>710</td></tr>
+                <tr><td class="row-head">3</td><td>Март</td><td>1480</td><td>975</td><td>800</td></tr>
+                <tr><td class="row-head">4</td><td>Апрель</td><td>1560</td><td>1030</td><td>860</td></tr>
+                <tr><td class="row-head">5</td><td>Май</td><td>1720</td><td>1110</td><td>920</td></tr>
+                <tr><td class="row-head">6</td><td>Июнь</td><td>1890</td><td>1240</td><td>1010</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>выделен диапазон от «Январь» до «API», построена столбчатая диаграмма;</li>
+              <li>у диаграммы есть заголовок и легенда с сервисами;</li>
+              <li>по вертикали отражена нагрузка (тыс. запросов), по горизонтали — месяцы.</li>
+            </ul>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">столбчатая диаграмма</span></div>
+        </div>
+        <!-- TASK 3 -->
+        <div class="task-block" id="t3">
+          <span class="task-num">Задание 3</span>
+          <div class="task-title">Задание 3. Линейный график: динамика нагрузки</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Освоить построение линейного графика для отображения динамики значения во времени.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">На листе «Задание 3» создайте таблицу количества запросов к системе по шести месяцам. Выделите диапазон с месяцами и значениями и постройте линейный график динамики нагрузки. Добавьте заголовок и подписи осей.</div>
+          <span class="lbl">Входные данные (перенесите эту таблицу на лист «Задание 3»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th></tr>
+                <tr><th class="corner"></th><th>Месяц</th><th>Запросов, тыс.</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Январь</td><td>11200</td></tr>
+                <tr><td class="row-head">2</td><td>Февраль</td><td>12800</td></tr>
+                <tr><td class="row-head">3</td><td>Март</td><td>13600</td></tr>
+                <tr><td class="row-head">4</td><td>Апрель</td><td>14100</td></tr>
+                <tr><td class="row-head">5</td><td>Май</td><td>15800</td></tr>
+                <tr><td class="row-head">6</td><td>Июнь</td><td>17200</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>построен линейный график по данным «Месяц — Запросов, тыс.»;</li>
+              <li>линия плавно растёт — показана динамика месячной нагрузки;</li>
+              <li>добавлены заголовок и подписи осей.</li>
+            </ul>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">линейный график</span></div>
+        </div>
+        <!-- TASK 4 -->
+        <div class="task-block" id="t4">
+          <span class="task-num">Задание 4</span>
+          <div class="task-title">Задание 4. Расчёт итогов и диаграмма по ним</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Научиться сначала выполнить расчёты по данным (СУММ), а уже затем построить по ним столбчатую диаграмму.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Используйте таблицу из Задания 2 (нагрузка по сервисам за 6 месяцев). Сначала вычислите суммарную нагрузку по каждому сервису за весь период (СУММ по каждому столбцу: веб-сервис, база данных, API). Затем по полученным итогам постройте столбчатую диаграмму, сравнивающую сервисы. Добавьте заголовок и подписи данных.</div>
+          <span class="lbl">Этапы выполнения</span>
+          <div class="ref-list">
+            <ul>
+              <li>шаг 1 — найти сумму для каждого сервиса функцией СУММ (три итога по столбцам);</li>
+              <li>шаг 2 — выделить строки «Сервис — Итог» и построить столбчатую диаграмму;</li>
+              <li>шаг 3 — настроить заголовок, подписи данных и легенду.</li>
+            </ul>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">расчёт + диаграмма</span></div>
+        </div>
+        <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+        <h2 class="section-title" style="margin-top:2.5rem" id="dz">Домашнее задание: три диаграммы на разных листах</h2>
+        <div class="card">
+          <p>Домашняя работа выполняется в файле <span class="key">Фамилия_Группа_Excel-3.xlsx</span>. Обязательное условие: каждая из трёх задач размещается на отдельном листе — <span class="key">«ДЗ-1»</span>, <span class="key">«ДЗ-2»</span> и <span class="key">«ДЗ-3»</span>. Переписывать классные задания нельзя: исходные данные другие.</p>
+        </div>
+        <div class="task-block" id="dz1">
+          <span class="task-num">ДЗ 1</span>
+          <div class="task-title">Круговая диаграмма: структура выручки (лист «ДЗ-1»)</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Перенесите таблицу на лист «ДЗ-1». Постройте круговую диаграмму выручки по классам программного обеспечения. Добавьте заголовок и легенду.</div>
+          <span class="lbl">Входные данные (перенесите на лист «ДЗ-1»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th></tr>
+                <tr><th class="corner"></th><th>Класс ПО</th><th>Выручка, руб.</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Системное ПО (программное обеспечение)</td><td>320000</td></tr>
+                <tr><td class="row-head">2</td><td>Прикладное ПО</td><td>540000</td></tr>
+                <tr><td class="row-head">3</td><td>Инструменты разработчика</td><td>180000</td></tr>
+                <tr><td class="row-head">4</td><td>СУБД (система управления базами данных)</td><td>260000</td></tr>
+                <tr><td class="row-head">5</td><td>Утилиты</td><td>60000</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">лист ДЗ-1</span></div>
+        </div>
+        <div class="task-block" id="dz2">
+          <span class="task-num">ДЗ 2</span>
+          <div class="task-title">Столбчатая диаграмма: трудозатраты по этапам (лист «ДЗ-2»)</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Перенесите таблицу на лист «ДЗ-2». Постройте столбчатую диаграмму трудозатрат по этапам разработки. Добавьте подписи осей.</div>
+          <span class="lbl">Входные данные (перенесите на лист «ДЗ-2»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th></tr>
+                <tr><th class="corner"></th><th>Этап</th><th>Трудозатраты, час</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Проектирование</td><td>40</td></tr>
+                <tr><td class="row-head">2</td><td>Разработка</td><td>210</td></tr>
+                <tr><td class="row-head">3</td><td>Тестирование</td><td>60</td></tr>
+                <tr><td class="row-head">4</td><td>Внедрение</td><td>30</td></tr>
+                <tr><td class="row-head">5</td><td>Сопровождение</td><td>25</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">лист ДЗ-2</span></div>
+        </div>
+        <div class="task-block" id="dz3">
+          <span class="task-num">ДЗ 3</span>
+          <div class="task-title">Линейный график: рост числа пользователей (лист «ДЗ-3»)</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Перенесите таблицу на лист «ДЗ-3». Постройте линейный график роста числа пользователей системы по месяцам. Добавьте заголовок.</div>
+          <span class="lbl">Входные данные (перенесите на лист «ДЗ-3»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th></tr>
+                <tr><th class="corner"></th><th>Месяц</th><th>Пользователей, тыс.</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Январь</td><td>12</td></tr>
+                <tr><td class="row-head">2</td><td>Февраль</td><td>15</td></tr>
+                <tr><td class="row-head">3</td><td>Март</td><td>19</td></tr>
+                <tr><td class="row-head">4</td><td>Апрель</td><td>24</td></tr>
+                <tr><td class="row-head">5</td><td>Май</td><td>30</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">лист ДЗ-3</span></div>
+        </div>
+        <!-- КОНТРОЛЬНЫЕ ВОПРОСЫ -->
+        <h2 class="section-title" style="margin-top:2.5rem" id="k">Контрольные вопросы</h2>
+        <div class="card">
+          <p style="margin-bottom:.6rem">Ответы запишите на <span class="key">отдельном листе</span> «Контрольные вопросы» того же файла.</p>
+          <div class="qlist">
+            <div class="q">1. Какой тип диаграммы показывает доли частей в целом? Приведите пример.</div>
+            <div class="q">2. Для чего используют столбчатую диаграмму (гистограмму)?</div>
+            <div class="q">3. Какой тип диаграммы подходит для отображения динамики значения во времени?</div>
+            <div class="q">4. Что такое легенда диаграммы и зачем она нужна?</div>
+            <div class="q">5. Что нужно выделить перед построением диаграммы в Excel?</div>
+            <div class="q">6. Как добавить заголовок к диаграмме?</div>
+            <div class="q">7. Чем круговая диаграмма отличается от столбчатой?</div>
+          </div>
+        </div>
+        <!-- s6 -->
+        <h2 class="section-title" id="s6" style="margin-top:2rem">Порядок сдачи и критерии оценивания</h2>
+        <div class="card">
+          <p>Работа сдаётся преподавателю файлом <span class="key">Фамилия_Группа_Excel-3.xlsx</span> (или ссылкой на Google/Яндекс-таблицу). Максимальный балл — 50: Задания 1–3 по 10 баллов (итого 30) + домашние задания ДЗ 1–3 по 10 баллов (30).</p>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Часть</th><th>Баллы</th><th>Шкала</th></tr></thead>
+            <tbody>
+              <tr><td>Практическая работа (задания 1–3)</td><td>30</td><td>27–30 — «отлично»; 21–26 — «хорошо»; 15–20 — «удовлетворительно»; &lt; 15 — повтор доработки</td></tr>
+              <tr><td>Домашнее задание (ДЗ 1–3)</td><td>30</td><td>27–30 — «отлично»; 21–26 — «хорошо»; 15–20 — «удовлетворительно»; &lt; 15 — повтор доработки</td></tr>
+              <tr><td>Итоговая оценка за блок</td><td>60</td><td>54–60 — «отлично»; 42–53 — «хорошо»; 30–41 — «удовлетворительно»; &lt; 30 — «неудовлетворительно»</td></tr>
+            </tbody>
+          </table></div>
+          <div class="info-box cyan"><strong>Требования к защите:</strong> студент объясняет, какой тип диаграммы и почему выбран, показывает построение круговой, столбчатой и линейной диаграмм, демонстрирует размещение задач на отдельных листах.</div>
+        </div>
+        <div class="lesson__nav">
+          <a class="btn btn--ghost btn--sm" href="../index.html">← Ко всем материалам</a>
+          <button class="btn btn--sm btn--quiz" data-quiz-id="isp-excel3">Проверить себя</button>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="footer"><div class="container">Информационные технологии в профессиональной деятельности</div></footer>
+<script src="../js/theme.js"></script>
+<script src="../js/cursor.js"></script>
+<script src="../js/quiz-data.js"></script>
+<script src="../js/quiz.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

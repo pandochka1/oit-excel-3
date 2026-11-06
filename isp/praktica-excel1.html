@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Excel: СУММ, МАКС, МИН</title>
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/magic.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html">← Информационные технологии</a>
+    <div class="header__right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Переключить тему">
+        <svg data-icon="dark" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        <svg data-icon="light" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="display:none"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-4v2m0 14v2m8-9h2M2 12h2m13-7l1.5-1.5M5.5 18.5L7 17m12 1l-1.5-1.5M5.5 5.5L7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+<div class="container">
+  <article class="lesson">
+    <header class="lesson__header">
+      <div class="badge-row">
+        <span class="badge badge--mark">Практическая работа 4</span>
+        <span class="badge badge--mark">09.02.07 • ИС и программирование</span>
+      </div>
+      <h1 class="lesson__title">Excel: функции СУММ, МАКС и МИН</h1>
+      <button class="btn btn--quiz" data-quiz-id="isp-excel1" style="margin-top:18px">Проверить себя</button>
+    </header>
+    <div class="lesson__layout">
+      <nav class="lesson__toc"><div class="prose"><ul class="toc"><li><a class="toc-link" href="#s0">Краткая теория: функции и формулы в Excel</a></li><li><a class="toc-link" href="#t1">Задание 1. Итоговая сумма расходов (СУММ)</a></li><li><a class="toc-link" href="#t2">Задание 2. Комплексный анализ зарплат (СУММ, СРЗНАЧ, МАКС, МИН)</a></li><li><a class="toc-link" href="#t3">Задание 3. Доля и сравнение показателей (СУММ, МАКС, МИН)</a></li><li><a class="toc-link" href="#dz">Домашнее задание: три задачи на разных листах</a></li><li><a class="toc-link" href="#k">Контрольные вопросы</a></li><li><a class="toc-link" href="#s6">Порядок сдачи и критерии оценивания</a></li></ul></div></nav>
+      <div class="prose">
+        <nav class="card">
+          <h3>Содержание практической работы</h3>
+          <ol style="padding-left:1.5rem;margin-top:.5rem">
+            <li><a href="#s0" style="color:var(--accent);text-decoration:none">Краткая теория: функции и формулы в Excel</a></li>
+            <li><a href="#t1" style="color:var(--accent);text-decoration:none">Задание 1. Итоговая сумма расходов (СУММ)</a></li>
+            <li><a href="#t2" style="color:var(--accent);text-decoration:none">Задание 2. Комплексный анализ зарплат (СУММ, СРЗНАЧ, МАКС, МИН)</a></li>
+            <li><a href="#t3" style="color:var(--accent);text-decoration:none">Задание 3. Доля и сравнение показателей (СУММ, МАКС, МИН)</a></li>
+            <li><a href="#dz" style="color:var(--accent);text-decoration:none">Домашнее задание: три задачи на разных листах</a></li>
+            <li><a href="#k" style="color:var(--accent);text-decoration:none">Контрольные вопросы (ответ — на отдельном листе)</a></li>
+            <li><a href="#s6" style="color:var(--accent);text-decoration:none">Порядок сдачи и критерии оценивания</a></li>
+          </ol>
+        </nav>
+        <!-- s0 -->
+        <h2 class="section-title first" id="s0">Краткая теория: функции и формулы в Excel</h2>
+        <div class="card">
+          <p>В работе с электронными таблицами практически любая задача сводится к вычислениям. Чтобы получить результат, в ячейку записывают <span class="key">формулу</span> — выражение, которое начинается со знака равенства <span class="key">=</span> и может содержать числа, ссылки на другие ячейки, знаки операций и функции. Самое главное правило: <span class="key">если в ячейке стоит формула, Excel хранит не отображаемый текст, а саму формулу</span>, а число в ячейке — это результат вычисления.</p>
+          <p>Ссылки на ячейки в формулах в этой практической работе используются <span class="key">относительные</span>: запись <span class="key">B2</span> при копировании формулы вниз или в стороны смещается относительно нового положения ячейки. (О других видах ссылок — в следующей практической работе.)</p>
+          <p>В этой практической работе мы применим четыре базовые функции:</p>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Функция</th><th>Назначение</th><th>Пример</th></tr></thead>
+            <tbody>
+              <tr><td>СУММ</td><td>Суммирование значений диапазона</td><td>=СУММ(B2:B10)</td></tr>
+              <tr><td>СРЗНАЧ</td><td>Среднее арифметическое значений</td><td>=СРЗНАЧ(C2:C20)</td></tr>
+              <tr><td>МАКС</td><td>Наибольшее значение в диапазоне</td><td>=МАКС(C2:C20)</td></tr>
+              <tr><td>МИН</td><td>Наименьшее значение в диапазоне</td><td>=МИН(D2:D20)</td></tr>
+            </tbody>
+          </table></div>
+          <div class="info-box"><strong>Как ввести функцию:</strong> начните с «=», наберите имя функции (например, =СУММ), затем откройте скобку, выделите мышью диапазон ячеек и закройте скобку. Нажмите Enter. Эту работу выполняем в <span class="key">Microsoft Excel</span>, <span class="key">LibreOffice Calc</span> или веб-редакторе <span class="key">Google Таблицы</span> / <span class="key">Яндекс Таблицы</span>.</div>
+        </div>
+        <div class="section-nav"><a href="#t1">К заданию 1 &rarr;</a><a href="#">К началу</a></div>
+        <!-- TASK 1 -->
+        <div class="task-block" id="t1">
+          <span class="task-num">Задание 1</span>
+          <div class="task-title">Задание 1. Простая задача: итоговая сумма расходов (функция СУММ)</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Освоить ввод данных в таблицу и вычисление суммы диапазона функцией СУММ.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">На листе «Задание 1» создайте таблицу планируемых и фактических расходов ИТ-отдела за квартал. Задача построена на одном приёме: вычислите итог по столбцу C (планируемый бюджет) функцией СУММ над диапазоном, и отдельно — итог по столбцу D (фактические расходы) функцией СУММ над диапазоном.</div>
+          <span class="lbl">Входные данные (перенесите эту таблицу на лист «Задание 1»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                <tr><th class="corner"></th><th>Статья</th><th>Категория</th><th>Бюджет, руб.</th><th>Факт, руб.</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Заработная плата</td><td>Персонал</td><td>580000</td><td>612000</td></tr>
+                <tr><td class="row-head">2</td><td>Страховые взносы</td><td>Персонал</td><td>175000</td><td>190400</td></tr>
+                <tr><td class="row-head">3</td><td>Серверы и хостинг</td><td>Инфраструктура</td><td>96000</td><td>88400</td></tr>
+                <tr><td class="row-head">4</td><td>Лицензии и ПО</td><td>Инфраструктура</td><td>134000</td><td>129500</td></tr>
+                <tr><td class="row-head">5</td><td>Обучение и курсы</td><td>Развитие</td><td>48000</td><td>36500</td></tr>
+                <tr><td class="row-head">6</td><td>Командировки</td><td>Развитие</td><td>61000</td><td>57800</td></tr>
+                <tr><td class="row-head">7</td><td>Закупка техники</td><td>Оборудование</td><td>205000</td><td>218600</td></tr>
+                <tr><td class="row-head">8</td><td>Резерв на риски</td><td>Прочее</td><td>50000</td><td>0</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>считаются итоги по столбцам C и D функцией СУММ;</li>
+              <li>получены два итога функцией СУММ — отдельно по бюджету и по факту;</li>
+              <li>сумма бюджета (СУММ по столбцу C) = <strong>1&nbsp;349&nbsp;000</strong> руб.; факт (СУММ по столбцу D) — иная сумма.</li>
+            </ul>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">СУММ</span></div>
+        </div>
+        <!-- TASK 2 -->
+        <div class="task-block" id="t2">
+          <span class="task-num">Задание 2</span>
+          <div class="task-title">Задание 2. Задача средней сложности: комплексный анализ зарплат (СУММ, СРЗНАЧ, МАКС, МИН)</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Научиться применять несколько функций для анализа одной таблицы.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">На новом листе «Задание 2» создайте таблицу специалистов команды разработки. В таблице уже готов столбец «Оклад, руб/мес». Примените к его диапазону функций: СУММ (сумму), СРЗНАЧ (среднее), МАКС (наибольший) и МИН (наименьший). Подпишите, у кого самый высокий оклад.</div>
+          <span class="lbl">Входные данные (перенесите эту таблицу на лист «Задание 2»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+                <tr><th class="corner"></th><th>Сотрудник</th><th>Роль</th><th>Ставка, руб/час</th><th>Часов в месяц</th><th>Оклад, руб/мес</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Иванов</td><td>Архитектор</td><td>2800</td><td>120</td><td>336000</td></tr>
+                <tr><td class="row-head">2</td><td>Петрова</td><td>Senior-разработчик</td><td>2100</td><td>140</td><td>294000</td></tr>
+                <tr><td class="row-head">3</td><td>Сидоров</td><td>Middle-разработчик</td><td>1500</td><td>160</td><td>240000</td></tr>
+                <tr><td class="row-head">4</td><td>Козлова</td><td>Frontend-разработчик</td><td>1650</td><td>150</td><td>247500</td></tr>
+                <tr><td class="row-head">5</td><td>Николаев</td><td>QA-инженер (инженер по качеству)</td><td>1200</td><td>160</td><td>192000</td></tr>
+                <tr><td class="row-head">6</td><td>Орлова</td><td>Аналитик</td><td>1400</td><td>140</td><td>196000</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>вычислены СУММ, СРЗНАЧ, МАКС, МИН по диапазону столбца «Оклад»;</li>
+              <li>вычислены СУММ, СРЗНАЧ, МАКС, МИН от столбца «Оклад»;</li>
+              <li>максимальный оклад 336 000 руб. — у архитектора Иванова.</li>
+            </ul>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">СУММ, СРЗНАЧ, МАКС, МИН</span></div>
+        </div>
+        <!-- TASK 3 -->
+        <div class="task-block" id="t3">
+          <span class="task-num">Задание 3</span>
+          <div class="task-title">Задание 3. Сложная задача: доля и сравнение показателей (СУММ, МАКС, МИН)</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Освоить поиск минимального значения функцией МИН и интерпретацию результата.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">На листе «Задание 3» создайте таблицу показателей отказоустойчивости сервисов. Нужно объединить несколько приёмов: добавьте столбец «Сумма» (СУММ) как итог по среднему времени, столбец «Доля, %» (каждое среднее время разделите на сумму этого диапазона). Затем найдите наибольшее среднее время (МАКС) и наименьшее (МИН) по диапазону столбца «Среднее, мс». Объясните, почему у самого быстрого сервиса процент ошибок наименьший.</div>
+          <div class="info-box"><strong>Подсказки к заданию:</strong>
+            <ul style="margin-top:6px;padding-left:18px">
+              <li>итоговую сумму (СУММ) поместите в отдельную ячейку ниже таблицы, например в строку 8;</li>
+              <li>долю каждого сервиса считайте как деление его среднего времени на итог — разделите значение каждой строки на итоговую ячейку по очереди;</li>
+              <li>для МАКС и МИН используйте функции по диапазону столбца «Среднее, мс»: =МАКС(C2:C7) и =МИН(C2:C7).</li>
+            </ul>
+          </div>
+          <span class="lbl">Входные данные (перенесите эту таблицу на лист «Задание 3»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+                <tr><th class="corner"></th><th>Сервис</th><th>Тип</th><th>Среднее, мс</th><th>Пик, мс</th><th>Ошибок, %</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Веб-приложение</td><td>API</td><td>240</td><td>980</td><td>2.1</td></tr>
+                <tr><td class="row-head">2</td><td>База данных</td><td>БД</td><td>52</td><td>310</td><td>0.4</td></tr>
+                <tr><td class="row-head">3</td><td>API-шлюз</td><td>API</td><td>88</td><td>450</td><td>1.2</td></tr>
+                <tr><td class="row-head">4</td><td>Кэширование</td><td>Кэш</td><td>14</td><td>120</td><td>0.05</td></tr>
+                <tr><td class="row-head">5</td><td>Почтовый сервис</td><td>Внешний</td><td>310</td><td>1200</td><td>4.5</td></tr>
+                <tr><td class="row-head">6</td><td>Файловое хранилище</td><td>Хранилище</td><td>175</td><td>760</td><td>1.8</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>вычислена сумма среднего времени по всем сервисам (СУММ);</li>
+              <li>добавлен столбец «Доля, %» = среднее / итог;</li>
+              <li>минимальное среднее время 14 мс у кэширования с ошибками 0,05 %.</li>
+            </ul>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">СУММ, МАКС, МИН</span></div>
+        </div>
+        <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+        <h2 class="section-title" style="margin-top:2.5rem" id="dz">Домашнее задание: три задачи на разных листах</h2>
+        <div class="card">
+          <p>Домашняя работа выполняется в файле <span class="key">Фамилия_Группа_Excel-1.xlsx</span>. Обязательное условие: каждая из трёх задач размещается на отдельном листе — <span class="key">«ДЗ-1»</span>, <span class="key">«ДЗ-2»</span> и <span class="key">«ДЗ-3»</span>. Переписывать классные задания нельзя: исходные данные другие.</p>
+        </div>
+        <div class="task-block" id="dz1">
+          <span class="task-num">ДЗ 1</span>
+          <div class="task-title">Сумма закупки оборудования (лист «ДЗ-1»)</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Перенесите таблицу на лист «ДЗ-1». Добавьте столбец «Стоимость без НДС» — перемножьте значения количества и цены функцией ПРОИЗВЕД, столбец «НДС» (налог на добавленную стоимость, 20 % от стоимости) и «Итого с НДС» (сумма по диапазону). Посчитайте общую сумму с НДС функцией СУММ.</div>
+          <span class="lbl">Входные данные (перенесите на лист «ДЗ-1»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                <tr><th class="corner"></th><th>Оборудование</th><th>Кол-во, шт</th><th>Цена, руб.</th><th>НДС, %</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Сервер</td><td>2</td><td>185000</td><td>20</td></tr>
+                <tr><td class="row-head">2</td><td>Рабочая станция</td><td>5</td><td>98000</td><td>20</td></tr>
+                <tr><td class="row-head">3</td><td>Монитор</td><td>8</td><td>22400</td><td>20</td></tr>
+                <tr><td class="row-head">4</td><td>Ноутбук</td><td>4</td><td>68000</td><td>20</td></tr>
+                <tr><td class="row-head">5</td><td>Сетевое оборудование</td><td>3</td><td>42000</td><td>20</td></tr>
+                <tr><td class="row-head">6</td><td>ИБП</td><td>4</td><td>21500</td><td>20</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">лист ДЗ-1</span></div>
+        </div>
+        <div class="task-block" id="dz2">
+          <span class="task-num">ДЗ 2</span>
+          <div class="task-title">Самая высокая зарплата в команде (лист «ДЗ-2»)</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Перенесите таблицу на лист «ДЗ-2». Добавьте столбец «Оклад с премией» (оклад + оклад × премия / 100) и «Годовая зарплата» (месячная × 12). Найдите максимальную годовую зарплату функцией МАКС.</div>
+          <span class="lbl">Входные данные (перенесите на лист «ДЗ-2»)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                <tr><th class="corner"></th><th>Сотрудник</th><th>Должность</th><th>Оклад, руб/мес</th><th>Премия, %</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Абрамов</td><td>Программист</td><td>95000</td><td>15</td></tr>
+                <tr><td class="row-head">2</td><td>Белова</td><td>Программист</td><td>88000</td><td>10</td></tr>
+                <tr><td class="row-head">3</td><td>Волков</td><td>Администратор БД</td><td>120000</td><td>20</td></tr>
+                <tr><td class="row-head">4</td><td>Гусева</td><td>Тестировщик</td><td>64000</td><td>12</td></tr>
+                <tr><td class="row-head">5</td><td>Дроздов</td><td>Системный аналитик</td><td>88000</td><td>10</td></tr>
+                <tr><td class="row-head">6</td><td>Ежова</td><td>DevOps-инженер</td><td>130000</td><td>18</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">лист ДЗ-2</span></div>
+        </div>
+        <div class="task-block" id="dz3">
+          <span class="task-num">ДЗ 3</span>
+          <div class="task-title">Сложная задача: расчёт затрат на облачные сервисы (лист «ДЗ-3»)</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Перенесите таблицу на лист «ДЗ-3». Выполните несколько связанных расчётов, применив все функции из практики: 1) «Стоимость ОЗУ» — для каждой строки перемножьте значения столбцов B и D функцией ПРОИЗВЕД; 2) «Стоимость хранилища» — перемножьте C и E функцией ПРОИЗВЕД; 3) «Итого» — сложите полученные столбцы функцией СУММ по диапазону; 4) в отдельном блоке вычислите сумму итогов (СУММ), среднее (СРЗНАЧ), максимум (МАКС) и минимум (МИН); 5) добавьте столбец «Доля, %» — значение каждой строки разделите на сумму этого диапазона.</div>
+          <div class="info-box"><strong>Подсказки к заданию:</strong>
+            <ul style="margin-top:6px;padding-left:18px">
+              <li>столбцы «Стоимость ОЗУ» и «Стоимость хранилища» добавьте справа от существующих;</li>
+              <li>для перемножения используйте функцию ПРОИЗВЕД, например =ПРОИЗВЕД(B2;D2) и =ПРОИЗВЕД(C2;E2);</li>
+              <li>итоговый блок с СУММ, СРЗНАЧ, МАКС и МИН разместите под таблицей отдельно.</li>
+            </ul>
+          </div>
+          <span class="lbl">Входные данные (перенесите на лист «ДЗ-3» — часть ячеек вычисляется)</span>
+          <div class="src-text">
+            <div class="table-wrap excel"><table>
+              <thead>
+                <tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
+                <tr><th class="corner"></th><th>Тариф</th><th>ОЗУ, ГБ</th><th>Хранилище, ГБ</th><th>Цена за 1 ГБ ОЗУ, руб.</th><th>Цена за 1 ГБ хранилища, руб.</th><th>Стоимость, руб./мес</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-head">1</td><td>Старт</td><td>2</td><td>50</td><td>220</td><td>3</td><td>590</td></tr>
+                <tr><td class="row-head">2</td><td>Бизнес</td><td>8</td><td>200</td><td>210</td><td>2,6</td><td>2400</td></tr>
+                <tr><td class="row-head">3</td><td>Профессиональный</td><td>16</td><td>500</td><td>195</td><td>2,2</td><td>4900</td></tr>
+                <tr><td class="row-head">4</td><td>Корпоративный</td><td>32</td><td>1000</td><td>180</td><td>1,8</td><td>9800</td></tr>
+                <tr><td class="row-head">5</td><td>Дев</td><td>4</td><td>100</td><td>230</td><td>3,5</td><td>350</td></tr>
+                <tr><td class="row-head">6</td><td>Старт+</td><td>4</td><td>100</td><td>205</td><td>2,8</td><td>890</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">лист ДЗ-3</span></div>
+        </div>
+        <!-- КОНТРОЛЬНЫЕ ВОПРОСЫ -->
+        <h2 class="section-title" style="margin-top:2.5rem" id="k">Контрольные вопросы</h2>
+        <div class="card">
+          <p style="margin-bottom:.6rem">Ответы запишите на <span class="key">отдельном листе</span> «Контрольные вопросы» того же файла Excel текстовыми ячейками.</p>
+          <div class="qlist">
+            <div class="q">1. С какого знака начинается любая формула в Excel и почему? Приведите пример.</div>
+            <div class="q">2. Что возвращает функция СУММ? Чем она отличается от сложения ячеек по отдельности?</div>
+            <div class="q">3. Как записать диапазон ячеек от B2 до B10? Приведите пример.</div>
+            <div class="q">4. Чем функция МАКС отличается от функции МИН?</div>
+            <div class="q">5. Что такое относительная ссылка на ячейку и как она ведёт себя при копировании формулы вниз?</div>
+            <div class="q">6. Какой итог можно посчитать функцией СУММ, а какой — функциями МАКС и МИН? Приведите по смыслу.</div>
+            <div class="q">7. Что произойдёт с относительной ссылкой при копировании формулы вниз по столбцу?</div>
+          </div>
+        </div>
+        <!-- s6 -->
+        <h2 class="section-title" id="s6" style="margin-top:2rem">Порядок сдачи и критерии оценивания</h2>
+        <div class="card">
+          <p>Работа сдаётся преподавателю файлом <span class="key">Фамилия_Группа_Excel-1.xlsx</span> (или ссылкой на Google/Яндекс-таблицу). Максимальный балл — 50: Задания 1–3 по 10 баллов (итого 30) + домашние задания ДЗ 1–3 по 10 баллов (30).</p>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Часть</th><th>Баллы</th><th>Шкала</th></tr></thead>
+            <tbody>
+              <tr><td>Практическая работа (задания 1–3)</td><td>30</td><td>27–30 — «отлично»; 21–26 — «хорошо»; 15–20 — «удовлетворительно»; &lt; 15 — повтор доработки</td></tr>
+              <tr><td>Домашнее задание (ДЗ 1–3)</td><td>30</td><td>27–30 — «отлично»; 21–26 — «хорошо»; 15–20 — «удовлетворительно»; &lt; 15 — повтор доработки</td></tr>
+              <tr><td>Итоговая оценка за блок</td><td>60</td><td>54–60 — «отлично»; 42–53 — «хорошо»; 30–41 — «удовлетворительно»; &lt; 30 — «неудовлетворительно»</td></tr>
+            </tbody>
+          </table></div>
+          <div class="info-box cyan"><strong>Требования к защите:</strong> студент показывает, как введена СУММ, где находится максимум (МАКС) и минимум (МИН), демонстрирует, что все домашние задачи размещены на отдельных листах, и отвечает на контрольные вопросы.</div>
+        </div>
+        <div class="lesson__nav">
+          <a class="btn btn--ghost btn--sm" href="../index.html">← Ко всем материалам</a>
+          <button class="btn btn--sm btn--quiz" data-quiz-id="isp-excel1">Проверить себя</button>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="footer"><div class="container">Информационные технологии в профессиональной деятельности</div></footer>
+<script src="../js/theme.js"></script>
+<script src="../js/cursor.js"></script>
+<script src="../js/quiz-data.js"></script>
+<script src="../js/quiz.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

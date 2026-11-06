@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Таблицы в текстовом процессоре</title>
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/magic.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html">← Информационные технологии</a>
+    <div class="header__right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Переключить тему">
+        <svg data-icon="dark" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        <svg data-icon="light" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="display:none"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-4v2m0 14v2m8-9h2M2 12h2m13-7l1.5-1.5M5.5 18.5L7 17m12 1l-1.5-1.5M5.5 5.5L7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+<div class="container">
+  <article class="lesson">
+    <header class="lesson__header">
+      <div class="badge-row">
+        <span class="badge badge--mark">Практическая работа</span>
+        <span class="badge badge--mark">09.02.07 • ИС и программирование</span>
+      </div>
+      <h1 class="lesson__title">Таблицы в текстовом процессоре</h1>
+      <button class="btn btn--quiz" data-quiz-id="isp-tables" style="margin-top:18px">Проверить себя</button>
+    </header>
+    <div class="lesson__layout">
+      <nav class="lesson__toc"><div class="prose"><ul class="toc"><li><a class="toc-link" href="#s0">Общие требования к оформлению таблиц по ГОСТ 7.32-2017</a></li><li><a class="toc-link" href="#s6">Порядок сдачи и критерии оценивания</a></li></ul></div></nav>
+      <div class="prose">
+        <nav class="card">
+          <h3>Содержание практической работы</h3>
+          <ol style="padding-left:1.5rem;margin-top:.5rem">
+            <li><a href="#s0" style="color:var(--accent);text-decoration:none">Общие требования к оформлению таблиц по ГОСТ 7.32-2017</a></li>
+            <li><a href="#t1" style="color:var(--accent);text-decoration:none">Задание 1. Создание простой таблицы</a></li>
+            <li><a href="#t2" style="color:var(--accent);text-decoration:none">Задание 2. Форматирование таблицы</a></li>
+            <li><a href="#t3" style="color:var(--accent);text-decoration:none">Задание 3. Объединение ячеек и перенос таблицы</a></li>
+            <li><a href="#t4" style="color:var(--accent);text-decoration:none">Задание 4. Вычисления и сортировка в таблице</a></li>
+            <li><a href="#t5" style="color:var(--accent);text-decoration:none">Задание 5. Конвертация текста в таблицу</a></li>
+            <li><a href="#s6" style="color:var(--accent);text-decoration:none">Порядок сдачи и критерии оценивания</a></li>
+          </ol>
+        </nav>
+        <!-- s0 -->
+        <h2 class="section-title first" id="s0">Общие требования к оформлению таблиц по ГОСТ 7.32-2017</h2>
+        <div class="card">
+          <p>Таблица в текстовом документе — это способ структурированного представления числовых данных, характеристик и справочных сведений. При оформлении таблиц по ГОСТ 7.32-2017 соблюдают следующие правила:</p>
+          <div class="ref-list">
+            <ul>
+              <li>таблица размещается сразу после абзаца, в котором на неё есть ссылка;</li>
+              <li>каждая таблица нумеруется сквозной нумерацией и получает подпись «Таблица N — Название», размещаемую выше таблицы слева без точки в конце;</li>
+              <li>заголовок таблицы пишется с прописной буквы, переносить название таблицы на следующую строку заголовка нежелательно;</li>
+              <li>при переносе таблицы на новую страницу строку с заголовками столбцов повторяют, а над продолжением пишут «Продолжение таблицы N»;</li>
+              <li>текст в ячейках выравнивается по ширине или по центру, числа — по правому краю;</li>
+              <li>основной шрифт таблицы может быть меньше основного текста (кегль 12–13), но единообразно во всём документе.</li>
+            </ul>
+          </div>
+          <div class="info-box"><strong>Инструменты:</strong> работа выполняется в <span class="key">Microsoft Word</span>, <span class="key">Google Docs</span> или <span class="key">Яндекс Документах</span>. Команды создания и форматирования таблиц различаются по названиям, но принципы одинаковы: «Вставка → Таблица», «Работа с таблицей» / «Макет».</div>
+        </div>
+        <div class="section-nav"><a href="#t1">К заданию 1 &rarr;</a><a href="#">К началу</a></div>
+        <!-- TASK 1 -->
+        <div class="task-block" id="t1">
+          <span class="task-num">Задание 1</span>
+          <div class="task-title">Создание простой таблицы</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Освоить создание таблицы, ввод данных в ячейки и навигацию по ячейкам с помощью клавиш Tab и стрелок.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Создайте таблицу «Таблица 1 — Основные СУБД» размером 4 строки × 3 столбца и заполните её данными из входного блока. Над таблицей разместите подпись по ГОСТ. Переход между ячейками выполняйте клавишей Tab, в пределах ячейки — переносом строки.</div>
+          <span class="lbl">Входные данные (содержимое таблицы)</span>
+          <div class="src-text">
+            <div class="table-wrap"><table><thead><tr><th>СУБД</th><th>Тип</th><th>Применение</th></tr></thead><tbody><tr><td>PostgreSQL</td><td>Реляционная</td><td>Хранение данных сайтов, аналитика</td></tr><tr><td>MongoDB</td><td>Документо-ориентированная</td><td>Хранение JSON-документов</td></tr><tr><td>Redis</td><td>Ключ-значение</td><td>Кэширование, очереди сообщений</td></tr></tbody></table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>написано «Таблица 1 — Основные СУБД» (без точки в конце);</li>
+              <li>таблица 4×3: строка заголовков + 3 строки данных;</li>
+              <li>заголовки столбцов выделены полужирным;</li>
+              <li>границы таблицы видны.</li>
+            </ul>
+          </div>
+          
+  <div class="emoji-ph">[ Здесь будет изображение результата работы ]</div>
+  <div class="task-meta"><span class="badge level">8 баллов</span><span class="badge">создание таблицы</span></div>
+  
+        </div>
+        <!-- TASK 2 -->
+        <div class="task-block" id="t2">
+          <span class="task-num">Задание 2</span>
+          <div class="task-title">Форматирование таблицы</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Научиться изменять ширину столбцов, высоту строк, выравнивание текста в ячейках и стиль границ.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">К таблице из задания 1 примените форматирование: задайте ширину столбцов (первый — 2,5 см, второй — 3,5 см, третий — 4,5 см), выровняйте заголовки по центру, текст данных по ширине, числа справа; задайте внешние границы таблицы средней толщиной, внутренние — тонкими.</div>
+          <span class="lbl">Входные данные (без изменений — используйте таблицу задания 1)</span>
+          <div class="src-text">
+            <p>Дополните таблицу строкой итога (образец строки):</p><div class="table-wrap"><table><thead><tr><th>Итого</th><th>3 типа</th><th>Часто используются в проектах</th></tr></thead><tbody></tbody></table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>столбцы имеют заданную ширину (2,5 / 3,5 / 4,5 см);</li>
+              <li>текст в заголовках по центру, в ячейках — по ширине;</li>
+              <li>верхняя и итоговая строка выделены, внешние границы толще внутренних;</li>
+              <li>строка «Итого» добавлена и выровнена по центру.</li>
+            </ul>
+          </div>
+          
+  <div class="emoji-ph">[ Здесь будет изображение результата работы ]</div>
+  <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">форматирование</span></div>
+  
+        </div>
+        <!-- TASK 3 -->
+        <div class="task-block" id="t3">
+          <span class="task-num">Задание 3</span>
+          <div class="task-title">Объединение ячеек и перенос таблицы</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Освоить объединение и разбиение ячеек, а также настройку переноса длинной таблицы на следующую страницу с повторением заголовка.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Создайте новую таблицу «Таблица 2 — Характеристики сред разработки» (6 строк × 3 столбца). Объедините ячейки первой строки в одну — это будет общий заголовок таблицы. Включите повторение строки заголовков при переносе на новую страницу, чтобы таблица переносилась корректно.</div>
+          <span class="lbl">Входные данные (содержимое таблицы)</span>
+          <div class="src-text">
+            <div class="table-wrap"><table><thead><tr><th>Среды разработки для языка Python</th></tr></thead><tbody><tr><td>Язык</td><td>IDE</td><td>Описание</td></tr><tr><td>Python</td><td>Visual Studio Code</td><td>Лёгкий редактор с плагинами</td></tr><tr><td>Python</td><td>PyCharm</td><td>Интегрированная среда от JetBrains</td></tr><tr><td>Python</td><td>Jupyter Notebook</td><td>Интерактивные блокноты для анализа данных</td></tr><tr><td>Примечание</td><td>—</td><td>Выбор среды зависит от задачи и опыта разработчика</td></tr></tbody></table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>первая ячейка таблицы объединена на всю ширину — это общий заголовок;</li>
+              <li>строка с заголовками столбцов повторяется при переносе таблицы;</li>
+              <li>таблица 6 строк × 3 столбца;</li>
+              <li>подпись «Таблица 2 — Характеристики сред разработки» выше таблицы.</li>
+            </ul>
+          </div>
+          
+  <div class="emoji-ph">[ Здесь будет изображение результата работы ]</div>
+  <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">объединение + перенос</span></div>
+  
+        </div>
+        <!-- TASK 4 -->
+        <div class="task-block" id="t4">
+          <span class="task-num">Задание 4</span>
+          <div class="task-title">Вычисления и сортировка в таблице</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Освоить ввод формул в таблицы (сумма, среднее) и сортировку данных столбцов.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Создайте таблицу «Таблица 3 — Объём дисков по годам» (4 строки × 4 столбца) с числовыми данными. Вычислите сумму и среднее значение для столбца «Объём SSD (ГБ)» с помощью формул. Отсортируйте строки по столбцу «Цена (руб.)» по возрастанию.</div>
+          <span class="lbl">Входные данные (содержимое таблицы)</span>
+          <div class="src-text">
+            <div class="table-wrap"><table><thead><tr><th>Год</th><th>Тип</th><th>Объём SSD (ГБ)</th><th>Цена (руб.)</th></tr></thead><tbody><tr><td>2023</td><td>SATA</td><td>512</td><td>3200</td></tr><tr><td>2023</td><td>NVMe</td><td>500</td><td>3800</td></tr><tr><td>2024</td><td>NVMe</td><td>1000</td><td>6500</td></tr><tr><td>Сумма</td><td>Среднее</td><td></td><td></td></tr></tbody></table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>в ячейке «Сумма» стоит результат сложения объёмов (512+500+1000=2012);</li>
+              <li>в строке «Среднее» — среднее значение (≈ 670,7);</li>
+              <li>строки данных отсортированы по цене по возрастанию (3200, 3800, 6500);</li>
+              <li>формулы введены, а не набраны вручную текстом.</li>
+            </ul>
+          </div>
+          
+  <div class="emoji-ph">[ Здесь будет изображение результата работы ]</div>
+  <div class="task-meta"><span class="badge level">12 баллов</span><span class="badge">формулы + сортировка</span></div>
+  
+        </div>
+        <!-- TASK 5 -->
+        <div class="task-block" id="t5">
+          <span class="task-num">Задание 5</span>
+          <div class="task-title">Конвертация текста в таблицу</div>
+          <span class="lbl">Цель</span>
+          <div class="goal">Освоить преобразование текста, разделённого табуляцией или точкой с запятой, в таблицу и обратно — таблицы в текст.</div>
+          <span class="lbl">Задача</span>
+          <div class="job">Вставьте приведённый текст, разделённый табуляцией, и преобразуйте его в таблицу «Таблица 4 — Показатели нагрузки сервера». Затем скопируйте результат и обратно преобразуйте таблицу в текст, разделив ячейки точкой с запятой.</div>
+          <span class="lbl">Входные данные (текст для конвертации)</span>
+          <div class="src-text">
+            <div class="table-wrap"><table><thead><tr><th>Показатель</th><th>Значение</th><th>Нормализация</th></tr></thead><tbody><tr><td>CPU Load</td><td>0,85</td><td>Более 0,7 — высокая</td></tr><tr><td>RAM Usage</td><td>72%</td><td>Оптимально менее 80%</td></tr><tr><td>Disk IO</td><td>120 МБ/с</td><td>Скорость чтения/записи</td></tr></tbody></table></div>
+          </div>
+          <span class="lbl">Референс (как должен выглядеть результат)</span>
+          <div class="ref-list">
+            <ul>
+              <li>текст с табуляцией преобразован в таблицу 4×3;</li>
+              <li>подпись «Таблица 4 — Показатели нагрузки сервера» добавлена;</li>
+              <li>обратное преобразование таблицы в текст с разделителем «;» выполнено корректно;</li>
+              <li>оба результата сохранены в документе.</li>
+            </ul>
+          </div>
+          
+  <div class="emoji-ph">[ Здесь будет изображение результата работы ]</div>
+  <div class="task-meta"><span class="badge level">10 баллов</span><span class="badge">конвертация</span></div>
+  
+        </div>
+        <!-- s6 -->
+        <h2 class="section-title" id="s6">Порядок сдачи и критерии оценивания</h2>
+        <div class="card">
+          <p>Работа сдаётся преподавателю в виде файла формата DOCX (или ссылки на Google/Яндекс-документ) и PDF-копии. Максимальный балл — 50 (Задание 1 — 8, задание 2 — 10, задание 3 — 10, задание 4 — 12, задание 5 — 10).</p>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Часть</th><th>Баллы</th><th>Шкала</th></tr></thead>
+            <tbody>
+              <tr><td>Вся работа</td><td>50</td><td>45–50 — «отлично»; 35–44 — «хорошо»; 25–34 — «удовлетворительно»; &lt; 25 — повтор доработки</td></tr>
+            </tbody>
+          </table></div>
+          <div class="info-box cyan"><strong>Требования к защите:</strong> студент показывает создание таблицы, изменение его размера и оформление границ, демонстрирует объединение ячеек, ввод формулы и сортировку, объясняет команды конвертации текста.</div>
+        </div>
+        <div class="lesson__nav">
+          <a class="btn btn--ghost btn--sm" href="../index.html">← Ко всем материалам</a>
+          <button class="btn btn--sm btn--quiz" data-quiz-id="isp-tables">Проверить себя</button>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="footer"><div class="container">Информационные технологии в профессиональной деятельности</div></footer>
+<script src="../js/theme.js"></script>
+<script src="../js/cursor.js"></script>
+<script src="../js/quiz-data.js"></script>
+<script src="../js/quiz.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
